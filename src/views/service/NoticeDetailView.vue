@@ -19,7 +19,7 @@
       <div class="notice-list-content">
         <p v-html="noticeDetail?.contents"></p>
       </div>
-      <router-link to="/service/NoticeView" class="btn-go-list">목록보기</router-link>
+      <RouterLink to="/service/NoticeView" class="btn-go-list">목록보기</RouterLink>
     </section>
     <form ref="fileForm" method="post" action="https://api.yanadoo.co.kr/download">
       <input id="filePath" type="hidden" name="filePath" value="" />

@@ -31,7 +31,7 @@
               {{ store.getSignIn?.user.name }}님,<br />
               <em>{{ myClassList?.totalCount }}개</em> 강의를 수강중이에요.
             </h3>
-            <router-link to="/myclass/MyClassListView" class="btn-my-info">MY클래스</router-link>
+            <RouterLink to="/myclass/MyClassListView" class="btn-my-info">MY클래스</RouterLink>
           </div>
           <swiper
             :modules="modules"
@@ -46,7 +46,7 @@
               <h4 class="empty">수강중인 클래스가 없습니다.</h4>
             </swiper-slide>
             <swiper-slide v-else v-for="(classRunning, index) in myClassList?.myClasses" :key="index">
-              <router-link :to="`/myclass/MyClassListView?studyEntranceSeq=${classRunning.studyEntranceSeq}`">
+              <RouterLink :to="`/myclass/MyClassListView?studyEntranceSeq=${classRunning.studyEntranceSeq}`">
                 <em class="d-day">D-{{ classRunning.remainingDays }}</em>
                 <h4 class="ellipsis line-clamp-1">{{ classRunning.packageName }}</h4>
                 <span
@@ -54,7 +54,7 @@
                   <span v-if="classRunning.teacherName !== null">·</span>
                   {{ classRunning.teacherName }}</span
                 >
-              </router-link>
+              </RouterLink>
             </swiper-slide>
           </swiper>
         </div>
@@ -102,7 +102,7 @@
         <h3 class="section-tit">{{ topPackage?.groupTitle }}</h3>
         <ul class="item-list">
           <li v-for="(top, index) in topPackage?.displayMainPackages" :key="index">
-            <router-link :to="`/store/ProductDetailView/${top.packageSeq}`">
+            <RouterLink :to="`/store/ProductDetailView/${top.packageSeq}`">
               <div class="img-box">
                 <img :src="top.thumbnailPath" :alt="top.packageName" />
               </div>
@@ -124,7 +124,7 @@
                 </ul>
                 <button type="button" class="btn-yellow more-view">자세히보기</button>
               </div>
-            </router-link>
+            </RouterLink>
           </li>
         </ul>
       </div>
@@ -135,7 +135,7 @@
         <div class="scroll-wrap">
           <ul class="item-list">
             <li v-for="(pick, index) in pickPackage?.displayMainPackages" :key="index">
-              <router-link :to="`/store/ProductDetailView/${pick.packageSeq}`">
+              <RouterLink :to="`/store/ProductDetailView/${pick.packageSeq}`">
                 <div class="img-box">
                   <img :src="pick.thumbnailPath" :alt="pick.packageName" />
                 </div>
@@ -159,7 +159,7 @@
                   </ul>
                   <button type="button" class="btn-yellow more-view">자세히보기</button>
                 </div>
-              </router-link>
+              </RouterLink>
             </li>
           </ul>
         </div>
@@ -169,22 +169,22 @@
       <div class="inner-col">
         <div class="notice-box">
           <h3 class="section-tit">공지사항</h3>
-          <router-link to="/service/NoticeView" class="notice-more">+ 더보기</router-link>
+          <RouterLink to="/service/NoticeView" class="notice-more">+ 더보기</RouterLink>
           <ul>
             <li v-for="(notice, index) in noticeList" :key="index">
-              <router-link :to="`/service/NoticeDetailView/${notice.serviceNoticeSeq}`" class="ellipsis line-clamp-1">{{
+              <RouterLink :to="`/service/NoticeDetailView/${notice.serviceNoticeSeq}`" class="ellipsis line-clamp-1">{{
                 notice.title
-              }}</router-link>
+              }}</RouterLink>
             </li>
           </ul>
         </div>
         <div class="notice-box">
           <h3 class="section-tit">자주묻는질문</h3>
-          <router-link to="/service/FaqView" class="notice-more">+ 더보기</router-link>
+          <RouterLink to="/service/FaqView" class="notice-more">+ 더보기</RouterLink>
           <ul>
             <li v-for="(faq, index) in faqList" :key="index">
-              <router-link :to="`/service/FaqView?faqSeq=${faq.faqSeq}`" class="ellipsis line-clamp-1"
-                >Q. {{ faq.title }}</router-link
+              <RouterLink :to="`/service/FaqView?faqSeq=${faq.faqSeq}`" class="ellipsis line-clamp-1"
+                >Q. {{ faq.title }}</RouterLink
               >
             </li>
             <!-- faqDetailTo+faq.faqSeq -->

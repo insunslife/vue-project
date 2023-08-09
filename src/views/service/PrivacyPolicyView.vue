@@ -4,8 +4,8 @@
       <section class="inner-col">
         <HeaderSub :sub-title="'개인정보 처리방침'" />
         <ul>
-          <li><router-link to="/service/TermsView">이용약관</router-link></li>
-          <li><router-link to="/service/PrivacyPolicyView">개인정보 처리방침</router-link></li>
+          <li><RouterLink to="/service/TermsView">이용약관</RouterLink></li>
+          <li><RouterLink to="/service/PrivacyPolicyView">개인정보 처리방침</RouterLink></li>
         </ul>
       </section>
     </section>

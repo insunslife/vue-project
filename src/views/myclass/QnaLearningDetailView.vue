@@ -35,13 +35,13 @@
             </div>
           </div>
 
-          <router-link
+          <RouterLink
             v-if="from === 'myclassQna'"
             :to="`/myClass/DetailMyClassView?idx=${sgus}&tab=2`"
             class="btn-go-list"
-            >목록보기</router-link
+            >목록보기</RouterLink
           >
-          <router-link v-else to="/myclass/QnaLearningListView" class="btn-go-list">목록보기</router-link>
+          <RouterLink v-else to="/myclass/QnaLearningListView" class="btn-go-list">목록보기</RouterLink>
         </section>
       </div>
     </section>

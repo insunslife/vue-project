@@ -30,8 +30,8 @@
               </div>
             </div>
           </div>
-          <router-link to="ListQnaInquiryView" class="btn-go-list" type="button" @click="goToList()"
-            >목록보기</router-link
+          <RouterLink to="ListQnaInquiryView" class="btn-go-list" type="button" @click="goToList()"
+            >목록보기</RouterLink
           >
         </section>
       </div>

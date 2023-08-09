@@ -3,18 +3,16 @@
     <ul class="prod-list">
       <li v-for="(prodItem, index) in props.prodContent" :key="index">
         <div class="img-wrap">
-          <router-link :to="`/store/ProductDetailView/${prodItem.packageSeq}`">
+          <RouterLink :to="`/store/ProductDetailView/${prodItem.packageSeq}`">
             <img :src="prodItem.thumbnailPath" :alt="prodItem.title + ` 썸네일 이미지`" />
-          </router-link>
+          </RouterLink>
         </div>
         <div class="txt-wrap">
           <span class="category"
             >{{ prodItem.categoryName }}<span v-if="prodItem.teacherName !== ''">·</span
             >{{ prodItem.teacherName }}</span
           >
-          <router-link :to="`/store/ProductDetailView/${prodItem.packageSeq}`" class="prod-tit">{{
-            prodItem.title
-          }}</router-link>
+          <RouterLink :to="`/store/ProductDetailView/${prodItem.packageSeq}`" class="prod-tit">{{prodItem.title}}</RouterLink>
           <ul class="prod-info-list">
             <li>{{ prodItem.levelCodeName }}</li>
             <li>{{ prodItem.stage }}차시</li>
@@ -53,8 +51,8 @@
           >
             미리보기
           </button>
-          <router-link :to="`/store/ProductDetailView/${prodItem.packageSeq}`" class="btn-yellow more"
-            >자세히보기</router-link
+          <RouterLink :to="`/store/ProductDetailView/${prodItem.packageSeq}`" class="btn-yellow more"
+            >자세히보기</RouterLink
           >
         </div>
       </li>

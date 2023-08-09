@@ -13,7 +13,7 @@
     </div>
     <ul class="lnb-menu">
       <li :class="{ new: learning }">
-        <router-link
+        <RouterLink
           to="MyClassListView"
           exact
           :class="[
@@ -25,14 +25,14 @@
               ? 'active'
               : ''
           ]"
-          >수강중인 클래스</router-link
+          >수강중인 클래스</RouterLink
         >
       </li>
-      <li><router-link to="EnrollListView">수강신청 클래스</router-link></li>
-      <li><router-link to="HistoryListView">수강이력</router-link></li>
-      <!-- <li><router-link to="/">개인결제 내역</router-link></li> -->
+      <li><RouterLink to="EnrollListView">수강신청 클래스</RouterLink></li>
+      <li><RouterLink to="HistoryListView">수강이력</RouterLink></li>
+      <!-- <li><RouterLink to="/">개인결제 내역</RouterLink></li> -->
       <li>
-        <router-link
+        <RouterLink
           to="QnaInquiryListView"
           exact
           :class="[
@@ -44,11 +44,11 @@
               ? 'active'
               : ''
           ]"
-          >문의내역</router-link
+          >문의내역</RouterLink
         >
       </li>
       <li>
-        <router-link
+        <RouterLink
           to="InfoView"
           exact
           :class="[
@@ -56,7 +56,7 @@
               ? 'active'
               : ''
           ]"
-          >회원정보관리</router-link
+          >회원정보관리</RouterLink
         >
       </li>
     </ul>

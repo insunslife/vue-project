@@ -13,14 +13,14 @@
           :key="notice.serviceNoticeSeq"
           :class="notice.newNoticeYn == 'Y' ? 'new' : ''"
         >
-          <router-link :to="to + notice.serviceNoticeSeq">
+          <RouterLink :to="to + notice.serviceNoticeSeq">
             <span v-if="notice.fixYn == 'N'">{{ notice.serviceNoticeSeq }}</span>
             <span v-else>공지</span>
             <div class="title">
               <strong class="ellipsis">{{ notice.title }}</strong>
             </div>
             <span class="date">{{ notice.registDate.slice(0, 10) }}</span>
-          </router-link>
+          </RouterLink>
         </li>
       </ul>
       <pagination :total-page="Math.ceil(totalCount / size)" @page-change="handlePageChange" />

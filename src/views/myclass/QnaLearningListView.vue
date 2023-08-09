@@ -6,8 +6,8 @@
         <section class="inquiry-content">
           <SubHeader :sub-title="'문의내역'" />
           <ul class="sub-menu">
-            <li><router-link to="ListQnaInquiryView">1:1문의</router-link></li>
-            <li><router-link to="ListQnaLearningView">학습 문의</router-link></li>
+            <li><RouterLink to="ListQnaInquiryView">1:1문의</RouterLink></li>
+            <li><RouterLink to="ListQnaLearningView">학습 문의</RouterLink></li>
           </ul>
           <div class="filter-box">
             <ul class="filter-guide">
@@ -36,7 +36,7 @@
               <span>답변여부</span>
             </li>
             <li v-for="userLectureQuestion in userLectureQuestionList" :key="userLectureQuestion.questionSeq">
-              <router-link :to="`/myClass/DetailQnaLearningView?idx=${userLectureQuestion.questionSeq}&from=question`">
+              <RouterLink :to="`/myClass/DetailQnaLearningView?idx=${userLectureQuestion.questionSeq}&from=question`">
                 <span>학습문의</span>
                 <div class="title">
                   <strong class="ellipsis">{{ userLectureQuestion.contents }}</strong>
@@ -45,7 +45,7 @@
                 <span class="answer" :class="{ active: userLectureQuestion.replyStatus === 'Y' }">{{
                   userLectureQuestion.replyStatus === 'Y' ? '답변완료' : '답변대기'
                 }}</span>
-              </router-link>
+              </RouterLink>
             </li>
           </ul>
           <ul v-else-if="userLectureQuestionList.length" class="table-area table-empty-list">

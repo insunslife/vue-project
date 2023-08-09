@@ -7,7 +7,7 @@
       주소의 변경 또는 삭제로 인해 연결할 수 없습니다.<br />
       페이지 주소가 정확한지 다시 한번 확인해 주세요.
     </p>
-    <router-link to="/" class="btn-home">홈으로 가기</router-link>
+    <RouterLink to="/" class="btn-home">홈으로 가기</RouterLink>
   </div>
 </template>
 

@@ -11,15 +11,15 @@
               </select>
             </li>
             <li>
-              <router-link :to="{ query: { category: '' } }" :class="!$route.query.category ? 'active' : ''"
-                >전체</router-link
+              <RouterLink :to="{ query: { category: '' } }" :class="!$route.query.category ? 'active' : ''"
+                >전체</RouterLink
               >
             </li>
             <li v-for="(categoryInfo, idx) in categoryInfoList" :key="categoryInfo.b2bCategorySeq" :seq="idx">
-              <router-link
+              <RouterLink
                 :to="{ query: { category: categoryInfo.b2bCategorySeq } }"
                 :class="Number(route.query.category) === categoryInfo.b2bCategorySeq ? 'active' : ''"
-                >{{ categoryInfo.categoryName }}</router-link
+                >{{ categoryInfo.categoryName }}</RouterLink
               >
             </li>
           </ul>

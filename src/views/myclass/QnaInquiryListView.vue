@@ -6,8 +6,8 @@
         <section class="inquiry-content">
           <HeaderSub :sub-title="'문의내역'" />
           <ul class="sub-menu">
-            <li><router-link to="QnaInquiryListView">1:1문의</router-link></li>
-            <li><router-link to="QnaLearningListView">학습 문의</router-link></li>
+            <li><RouterLink to="QnaInquiryListView">1:1문의</RouterLink></li>
+            <li><RouterLink to="QnaLearningListView">학습 문의</RouterLink></li>
           </ul>
           <div class="filter-box">
             <ul class="filter-guide">
@@ -35,7 +35,7 @@
               <span>작성일</span>
             </li>
             <li v-for="inquiry in inquiryList" :key="inquiry.inquirySeq">
-              <router-link :to="`/myclass/QnaInqueryDetailView?idx=${inquiry.inquirySeq}`">
+              <RouterLink :to="`/myclass/QnaInqueryDetailView?idx=${inquiry.inquirySeq}`">
                 <span>{{ inquiry.categoryName }}</span>
                 <div class="title">
                   <strong class="ellipsis">{{ inquiry.contents }}</strong>
@@ -44,7 +44,7 @@
                   inquiry.answerYn === 'Y' ? '답변완료' : '답변대기'
                 }}</span>
                 <span class="date">{{ inquiry.registDate }}</span>
-              </router-link>
+              </RouterLink>
             </li>
           </ul>
           <ul v-else-if="noList" class="table-area table-empty-list">

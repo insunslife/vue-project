@@ -1,9 +1,9 @@
 <template>
   <div class="top-banner">
     <div class="inner-col">
-      <router-link :to="`/service//NoticeDetailView/${props.fixedNotice.serviceNoticeSeq}`">{{
+      <RouterLink :to="`/service//NoticeDetailView/${props.fixedNotice.serviceNoticeSeq}`">{{
         fixedNotice.title
-      }}</router-link>
+      }}</RouterLink>
       <button type="button" class="btn-top-close" @click="$emit('topbanner-close')">
         <span class="blind">닫기</span>
       </button>

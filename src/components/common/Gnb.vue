@@ -2,12 +2,12 @@
 <template>
   <div class="nav-wrap">
     <h1 class="logo">
-      <router-link to="/">
+      <RouterLink to="/">
         <img
           :src="mainLogo?.logoFilePath ? mainLogo.logoFilePath : '/src/assets/images/img_logo_yanadoo.png'"
           :alt="store.siteCode + ' logo images'"
         />
-      </router-link>
+      </RouterLink>
     </h1>
     <nav>
       <ul>
@@ -15,18 +15,18 @@
           <span class="depth1">{{ gnb.gnbName }}</span>
           <ul>
             <li v-for="(gnbSub, index) in gnb.childGnbMenus" :key="index">
-              <router-link :to="`/store/ProductListView/${gnbSub.categorySeq}`">
+              <RouterLink :to="`/store/ProductListView/${gnbSub.categorySeq}`">
                 {{ gnbSub.gnbName }}
-              </router-link>
+              </RouterLink>
             </li>
           </ul>
         </li>
         <!-- 고정메뉴 -->
         <li>
-          <router-link to="/myclass/MyClassMainView" class="depth1"> MY클래스 </router-link>
+          <RouterLink to="/myclass/MyClassMainView" class="depth1"> MY클래스 </RouterLink>
         </li>
         <li>
-          <router-link to="/service/HelpView" class="depth1">고객센터</router-link>
+          <RouterLink to="/service/HelpView" class="depth1">고객센터</RouterLink>
         </li>
         <!-- // 고정메뉴 -->
       </ul>
